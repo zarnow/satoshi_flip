@@ -51,8 +51,8 @@ module satoshi_flip::house_data {
       balance: coin.into_balance(),
       house: ctx.sender(),
       public_key,
-      max_stake: 50_000_000_000, // 50 SUI, 1 SUI = 10^9.
-      min_stake: 1_000_000_000, // 1 SUI.
+      max_stake: 5_000_000_000, // 5 SUI, 1 SUI = 10^9.
+      min_stake: 10_000_000, // 0.01 SUI.
       fees: balance::zero(),
       base_fee_in_bp: 100 // 1% in basis points.
     };

@@ -177,7 +177,7 @@ module satoshi_flip::single_player_satoshi {
   }
 
   /// Internal helper function used to create a new game.
-  fun internal_start_game(guess: String, counter: &mut Counter, coin: Coin<SUI>, house_data: &mut HouseData, fee_bp: u16, ctx: &mut TxContext): (ID, Game) {
+  public fun start_game(guess: String, counter: &mut Counter, coin: Coin<SUI>, house_data: &mut HouseData, fee_bp: u16, ctx: &mut TxContext): (ID, Game) {
     // Ensure guess is valid.
     map_guess(guess);
     let user_stake = coin.value();
